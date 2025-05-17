@@ -369,39 +369,6 @@
   <!-- Main JS File -->
   <script src="main.js"></script>
 
-
-  <script>
-document.querySelector('.php-email-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const form = this;
-  const formData = new FormData(form);
-
-  fetch('contact.php', {
-    method: 'POST',
-    body: formData
-  })
-  .then(response => response.json())
-  .then(data => {
-    form.querySelector('.loading').style.display = 'none';
-    if (data.success) {
-      form.querySelector('.sent-message').style.display = 'block';
-      form.reset();
-    } else {
-      form.querySelector('.error-message').textContent = data.error || 'Erro desconhecido.';
-      form.querySelector('.error-message').style.display = 'block';
-    }
-  })
-  .catch(() => {
-    form.querySelector('.loading').style.display = 'none';
-    form.querySelector('.error-message').textContent = 'Erro ao enviar. Tente novamente.';
-    form.querySelector('.error-message').style.display = 'block';
-  });
-
-  form.querySelector('.loading').style.display = 'block';
-  form.querySelector('.sent-message').style.display = 'none';
-  form.querySelector('.error-message').style.display = 'none';
-});
-</script>
 </body>
 
 </html>
