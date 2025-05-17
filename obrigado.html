@@ -9,20 +9,61 @@
     <!-- Vendor CSS Files -->
     <link href="bootstrap.min.css" rel="stylesheet">
     <link href="bootstrap-icons.css" rel="stylesheet">
-    <link href="aos.css" rel="stylesheet">
-    <link href="glightbox.min.css" rel="stylesheet">
-    <link href="swiper-bundle.min.css" rel="stylesheet">
-    <!-- Main CSS File -->
     <link href="main.css" rel="stylesheet">
-    <!-- Seu CSS adicional (opcional) -->
-    <link rel="stylesheet" href="style.css">
+    <style>
+      body {
+        min-height: 100vh;
+        margin: 0;
+        font-family: 'Roboto', Arial, sans-serif;
+        /* Background com imagem e fade escuro */
+        background: linear-gradient(rgba(30,30,30,0.7), rgba(30,30,30,0.7)), url('bg-tks.jpg') no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .agradecimento-box {
+        background: rgba(255,255,255,0.92);
+        border-radius: 18px;
+        box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
+        padding: 48px 32px;
+        max-width: 420px;
+        width: 100%;
+        text-align: center;
+        animation: fadeIn 1.2s;
+      }
+      .agradecimento-box h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #198754;
+        margin-bottom: 18px;
+        letter-spacing: 1px;
+      }
+      .agradecimento-box p {
+        color: #333;
+        font-size: 1.1rem;
+        margin-bottom: 18px;
+      }
+      .agradecimento-box .btn {
+        padding: 10px 32px;
+        font-size: 1.1rem;
+        border-radius: 25px;
+      }
+      .agradecimento-box .btn-info:hover {
+        background-color: #12a4c6 !important;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(30px);}
+        to { opacity: 1; transform: translateY(0);}
+      }
+    </style>
 </head>
-<body class="index-page d-flex flex-column justify-content-center align-items-center" style="min-height:100vh;">
-    <div class="text-center">
-        <h1 class="text-success mb-3">Obrigado!</h1>
-        <p class="mb-2">Seu pedido foi recebido com sucesso.</p>
-        <p class="mb-4">Você receberá um e-mail de confirmação em breve.</p>
-        <a href="index.html" class="btn btn-primary">Voltar para a página inicial</a>
+<body>
+    <div class="agradecimento-box shadow-lg" style="background: rgba(255,255,255,0.5);">
+        <i class="bi bi-emoji-smile" style="font-size:3rem;color:#d1d1d1;"></i>
+        <h1 style="font-size:3rem;color:#d1d1d1;">Obrigado!</h1>
+        <p style="font-size:1rem;color:#d1d1d1;">Sua mensagem foi enviada com sucesso.<br>Em breve entrarei em contato com você.</p>
+        <a href="index.html" class="btn btn-info mt-2" style="background-color:#088cad; border:none;"><i class="bi bi-house-door"></i> Voltar para a página inicial</a>
     </div>
 </body>
 </html>
