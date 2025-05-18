@@ -12,6 +12,8 @@
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="bootstrap.min.css" rel="stylesheet">
@@ -34,9 +36,11 @@
       <ul>
         <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
         <li><a href="#about"><i class="bi bi-person navicon"></i><span>Sobre mim</span></a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Curriculo</span></a></li>
         <li><a href="#skills"><i class="bi bi-file-earmark-text navicon"></i><span>Habilidades</span></a></li>
+        <li><a href="#certificacoes"><i class="bi bi-file-earmark-text navicon"></i><span>Certificações</span></a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Curriculo</span></a></li>
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contato</span></a></li>
+        
       </ul>
     </nav>
 
@@ -55,8 +59,8 @@
             <h2>Gregory Braga</h2>
             <p>Eu sou <span class="typed" data-typed-items="Help Desker, Suporte Técnico, Dev Student ">Analista de TI</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
             <div class="social-links">
-              <a href="https://www.instagram.com/yng.greek?igsh=MW9kNWRqdHo0eHVsdg=="><i class="bi bi-instagram"></i></a>
-              <a href="https://www.linkedin.com/in/gregorybraga"><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.instagram.com/yng.greek?igsh=MW9kNWRqdHo0eHVsdg==" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/gregorybraga" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
         </div>
@@ -68,7 +72,7 @@
     <section id="about" class="about section">
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title flex-column align-items-justify mx-3 my-2" data-aos="fade-up">
         <h2>Sobre mim</h2>
         <p>Sou motivado em ajudar as pessoas em suas necessidades, sendo um importante solucionador de problemas ou intermediando eles. Como Analista de Suporte Técnico, possuo uma sólida experiência em TI, tendo suportado centenas de pessoas a resolverem seus desafios técnicos, participando ativamente em diferentes tipos de projetos, sendo um importante elo nas fases de solução de problemas. Como exemplo, realizei o inventário de mais de 3.000 ativos de TI de todo o parque informático do grupo Stellantis, concluindo o projeto bem antes da data de conclusão, durante o evento Full Inventory 2023 do time de Gestão de Ativos. Como resultado do meu trabalho, foi possível o levantamento dos dados de equipamentos não devolvidos e furtados, auxiliando assim, a tomada de decisão da gestão. 
           Sou formado em Técnico de TI pela Fundação de Apoio à Escola Técnica (FAETEC) e graduando em Banco de Dados, 
@@ -80,8 +84,10 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="Perfil.jpg" class="img-fluid" alt="">
+          <div class="col-lg-4 d-flex justify-content-center align-items-center">
+            <img src="Perfil.jpg" class="img-fluid rounded shadow" alt="Foto de perfil"
+              style="max-width: 320px; border-radius: 18px; box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18); transition: transform 0.3s; background: rgba(255,255,255,0.6);"
+              onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
           </div>
           <div class="col-lg-8 content">
             <h2>Resumo das minhas informações pessoais.</h2>
@@ -101,9 +107,10 @@
                 </ul>
               </div>
             </div>
-            <p class="py-3">
-              Eu sou natural de Volta Redonda, cidade situada no Sul-Fluminense mas atualmente resido em Resende, minha segunda "casa".
-              Meu hobby é a prática de esportes: O futebol, o basquete, mas principalmente a corrida de rua e o pedal — aquela trilha em uma manhã de um Domingo ensolarado. 
+            <p class="sobre-mim-paragrafo py-3">
+              "Sou natural de Volta Redonda, no Sul Fluminense, mas foi em Resende que encontrei minha segunda casa e novas oportunidades. 
+              Tenho paixão por esportes: futebol, basquete, mas principalmente corrida de rua e ciclismo — nada como uma trilha em uma manhã de Domingo ensolarado para curtir com os amigos. 
+              Acredito que o esporte me ensinou disciplina, resiliência e trabalho em equipe, valores que levo para minha vida profissional e pessoal."
             </p>
           </div>
         </div>
@@ -118,232 +125,346 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Habilidades</h2>
-        <p>Algumas das minhas Soft Skills.</p>
+        <p>Algumas das minhas principais skills técnicas e comportamentais.</p>
       </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row skills-content skills-animation">
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>Comunicação</span> <i class="val">98%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="98"></div>
+      <div class="container py-3">
+        <div class="row justify-content-center gap-4">
+          <!-- Habilidade 1 -->
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card skill-card text-center shadow-sm" data-aos="zoom-in" data-aos-delay="100">
+              <div class="card-body">
+                <i class="bi bi-chat-dots-fill skill-icon mb-3"></i>
+                <h5 class="card-title mb-2">Comunicação</h5>
+                <p class="card-text">Clareza, empatia e assertividade no contato com usuários e equipes.</p>
               </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Resolução de problemas</span> <i class="val">97%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="97" aria-valuemin="0" aria-valuemax="97"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Capacidade Analítica</span> <i class="val">95%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="95"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
+            </div>
           </div>
-
-          <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>Inteligência Emocional</span> <i class="val">96%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="96" aria-valuemin="0" aria-valuemax="96"></div>
+          <!-- Habilidade 2 -->
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card skill-card text-center shadow-sm" data-aos="zoom-in" data-aos-delay="200">
+              <div class="card-body">
+                <i class="bi bi-lightbulb-fill skill-icon mb-3"></i>
+                <h5 class="card-title mb-2">Resolução de Problemas</h5>
+                <p class="card-text">Capacidade de analisar cenários e propor soluções rápidas e eficazes.</p>
               </div>
-            </div><!-- End Skills Item -->
-
-          <!-- End Skills Item -->
-
+            </div>
           </div>
-
+          <!-- Habilidade 3 -->
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card skill-card text-center shadow-sm" data-aos="zoom-in" data-aos-delay="300">
+              <div class="card-body">
+                <i class="bi bi-graph-up-arrow skill-icon mb-3"></i>
+                <h5 class="card-title mb-2">Capacidade Analítica</h5>
+                <p class="card-text">Análise de dados, métricas e indicadores para tomada de decisão.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Habilidade 4 -->
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card skill-card text-center shadow-sm" data-aos="zoom-in" data-aos-delay="400">
+              <div class="card-body">
+                <i class="bi bi-emoji-smile-fill skill-icon mb-3"></i>
+                <h5 class="card-title mb-2">Inteligência Emocional</h5>
+                <p class="card-text">Gestão das emoções e resiliência em ambientes de pressão.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Habilidade 5 -->
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card skill-card text-center shadow-sm" data-aos="zoom-in" data-aos-delay="500">
+              <div class="card-body">
+                <i class="bi bi-tools skill-icon mb-3"></i>
+                <h5 class="card-title mb-2">Manutenção Técnica</h5>
+                <p class="card-text">Experiência em montagem, manutenção e troubleshooting de computadores e periféricos.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Habilidade 6 -->
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="card skill-card text-center shadow-sm" data-aos="zoom-in" data-aos-delay="600">
+              <div class="card-body">
+                <i class="bi bi-ticket-detailed-fill skill-icon mb-3"></i>
+                <h5 class="card-title mb-2">Gestão de Tickets</h5>
+                <p class="card-text">Atuação eficiente no fluxo de chamados, priorização, acompanhamento e resolução via ferramentas ITSM.</p>
+              </div>
+            </div>
+          </div>
         </div>
-
       </div>
+
+      <style>
+        .skill-card {
+          border: none;
+          border-radius: 18px;
+          background: rgba(25,135,255,0.07);
+          transition: transform 0.25s, box-shadow 0.25s;
+        }
+        .skill-card:hover {
+          transform: translateY(-8px) scale(1.04);
+          box-shadow: 0 8px 32px 0 rgba(25,135,255,0.18);
+          background: rgba(25,135,255,0.13);
+        }
+        .skill-icon {
+          font-size: 2.5rem;
+          color: #1987ff;
+          transition: color 0.2s;
+        }
+        .skill-card:hover .skill-icon {
+          color: #0d6efd;
+        }
+        .card-title {
+          font-weight: 700;
+          color: #222;
+        }
+        .card-text {
+          color: #444;
+          font-size: 1.01rem;
+        }
+      </style>
 
     </section><!-- /Skills Section -->
 
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
-
-      <!-- Section Title -->
+    <!-- Certifications Section -->
+    <section id="certificacoes" class="section" style="background: rgba(255,255,255,0.85); border-radius: 18px;">
       <div class="container section-title" data-aos="fade-up">
-        <h2>Informação Curricular</h2>
-        <p>Abaixo eu relaciono a minha trajetória acadêmica e as minhas experiências profissionais mais recentes. </p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">           
-
-            <h3 class="resume-title">Formação Acadêmica</h3>
-            <div class="resume-item">
-              <h4>Banco de Dados</h4>
-              <h5>2022 - 2024</h5>
-              <p><em>Universidade Estácio de Sá, RJ</em></p>
-              <p></p>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Técnico em Informática</h4>
-              <h5>2017 - 2018</h5>
-              <p><em>FAETEC - Amaury Cesar Vieira, Volta Redonda, RJ</em></p>
-              <p></p>
-            </div><!-- Edn Resume Item -->
-
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Experiência Profissional</h3>
-            <div class="resume-item">
-              <h4>Analista de Suporte N2 Jr.</h4>
-              <h5>Stefanini Group | Volkswagen - Caminhões e Ônibus</h5>
-              <h6>2024 - Atualmente</h6>
-              <p><em>Porto Real, Rio de Janeiro, RJ</em></p>
-              <ul>
-                <li>Suporte de segundo nível (N2) em microinformática (notebooks, desktops) e telefonia móvel ( configuração de MDM no IOS em dispositivos Iphone e Ipad.)</li>
-                <li>Instalação e configuração de sistemas operacionais e softwares padrão.</li>
-                <li> Instalação, configuração e personalização de equipamentos conforme IDs e perfis de usuários.</li>
-                <li>Gestão de chamados via ferramenta ITSM, com análise e escalonamento conforme criticidade e complexidade.</li>
-                <li>Análise e escalonamento de incidentes (N2) conforme gravidade e complexidade.</li>
-                <li>Gestão de ativos de TI, com inventário e controle de equipamentos.</li>
-                <li>Atendimento Field Service em ambiente corporativo de cliente multinacional (Volkswagen Group).</li>
-              </ul> 
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Analista de Suporte N2 Jr.</h4>
-              <h5>ATOS Brasil | Stellantis Group</h5>
-              <h6>2023 - 2024</h6>
-              <p><em>Porto Real, Rio de Janeiro, RJ</em></p>
-              <ul>
-                <li>Responsável pelo levantamento e validação de dados de ativos informáticos na planta Stellantis em Porto Real - RJ.</li>
-                <li>Especialista em Field Service, com foco em formatação, configuração e testes de Laptops e Desktops.</li>
-                <li>Conhecimento em Active Directory, gerenciamento de estoque, Excel Avançado, Office 365, fundamentos de segurança em TI e redes LAN/WAN.</li>
-                <li>Participação ativa no evento Full Inventory 2023, concluindo o inventário de mais de 3 mil ativos em menos de 90 dias, antes do prazo.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Consultor Técnico de TI Jr.</h4>
-              <h5>SD Sistemas</h5>
-              <h6>2021 - 2022</h6>
-              <p><em>Porto Real, Rio de Janeiro, RJ</em></p>
-              <ul>
-                <li>Execução de manutenções preventivas e corretivas em software e hardware, garantindo a integridade e o desempenho dos sistemas.</li>
-                <li>Realização de procedimentos de formatações e backups em servidores, retaguardas e PDVs, utilizando ferramentas como Cobian para backups de banco de dados.</li>
-                <li>Responsável pela condução diária de automóvel da empresa, viajando pela região para atendimento de chamados.</li>
-                <li>Proficiência na utilização do Movidesk para realizar abertura, edição e inclusão de tickets, contribuindo para uma gestão eficiente dos chamados.</li>
-              </ul>
-            </div><!-- Edn Resume Item -->
-
-          </div>
-
+        <h2>Certificações</h2>
+        <p>Veja algumas das minhas certificações profissionais:</p>
+      </div>
+      <div class="container d-flex flex-wrap justify-content-center gap-4 py-3">
+        <!-- Badge 1 -->
+        <div class="d-flex flex-column align-items-center mx-3 my-2">
+          <img src="rwpc.png" alt="Certificação 1" width="150" height="150" data-aos="fade-up" data-aos-duration="1200" style="box-shadow:0 4px 6px rgba(0,0,0,0.07); border-radius:5px;">
+          <p class="mt-3 mb-0 text-center" style="font-weight:600; font-size:1.05rem; color:#222; letter-spacing:0.5px;">
+            <a a href= "https://www.credly.com/badges/2335f9ad-5489-48ac-b82c-98e6a0b566a5/public_url" target="_blank">Work Professional Certification - RWPC™</a>
+          </p>
+        </div>
+        <!-- Badge 2 -->
+        <div class="d-flex flex-column align-items-center mx-2 my-2">
+          <img src="google-it.png" alt="Certificação 2" width="150" height="150" data-aos="fade-up" data-aos-duration="1200" style="box-shadow:0 4px 16px rgba(0,0,0,0.07); border-radius:12px;">
+          <p class="mt-3 mb-0 text-center" style="font-weight:600; font-size:1.05rem; color:#222; letter-spacing:0.5px;">
+            <a href="https://www.credly.com/badges/94b21556-55dc-4e7d-92a8-be23dd1ab95d/public_url" target="_blank"> Google IT Support Professional Certificate </a>
+          </p>
+        </div>
+        <!-- Badge 3 -->
+        <div class="d-flex flex-column align-items-center mx-3 my-2">
+          <img src="netwk.png" alt="Certificação 3" width="150" height="150" data-aos="fade-up" data-aos-duration="1200" style="box-shadow:0 4px 16px rgba(0,0,0,0.07); border-radius:12px;">
+          <p class="mt-3 mb-0 text-center" style="font-weight:600; font-size:1.05rem; color:#222; letter-spacing:0.5px;">
+            <a href="https://www.credly.com/badges/ab7fe34d-4d32-48cb-bc72-e8eb6ef82d35/public_url" target="_blank">Cisco Networking Basics </a>
+          </p>
+        </div>
+        <!-- Badge 4 -->
+        <div class="d-flex flex-column align-items-center mx-3 my-2">
+          <img src="netwk-path.png" alt="Certificação 4" width="150" height="150" data-aos="fade-up" data-aos-duration="1200" style="box-shadow:0 4px 16px rgba(0,0,0,0.07); border-radius:12px;">
+          <p class="mt-3 mb-0 text-center" style="font-weight:600; font-size:1.05rem; color:#222; letter-spacing:0.5px;">
+            <a href="https://www.credly.com/badges/2edd4883-d46d-4e9e-b70e-4d86a9108b21/public_url" target="_blank">Cisco Network Technician Career Path </a>
+          </p>
         </div>
 
-      </div>
+        <div class="d-flex flex-column align-items-center mx-3 my-2">
+          <img src="PT-IC-SEC.png" alt="Certificação 4" width="150" height="150" data-aos="fade-up" data-aos-duration="1200" style="box-shadow:0 4px 16px rgba(0,0,0,0.07); border-radius:12px;">
+          <p class="mt-3 mb-0 text-center" style="font-weight:600; font-size:1.05rem; color:#222; letter-spacing:0.5px;">
+            <a href="https://certs.ibsec.com.br/?cert_hash=e61c7705a6e7e2e2" target="_blank">Boas Práticas de Cibersegurança (Cybersecurity Awareness) </a>
+          </p>
+        </div>
 
+        <div class="d-flex flex-column align-items-center mx-3 my-2">
+          <img src="PT-IC-INF.png" alt="Certificação 4" width="150" height="150" data-aos="fade-up" data-aos-duration="1200" style="box-shadow:0 4px 16px rgba(0,0,0,0.07); border-radius:12px;">
+          <p class="mt-3 mb-0 text-center" style="font-weight:600; font-size:1.05rem; color:#222; letter-spacing:0.5px;">
+            <a href="https://certs.ibsec.com.br/?cert_hash=ae5a3c3f4ab51c41" target="_blank">Fundamentos em Informática </a>
+          </p>
+        </div>
+
+        <div class="d-flex flex-column align-items-center mx-3 my-2">
+          <img src="atlassian.png" alt="Certificação 4" width="150" height="150" data-aos="fade-up" data-aos-duration="1200" style="box-shadow:0 4px 16px rgba(0,0,0,0.07); border-radius:12px;">
+          <p class="mt-3 mb-0 text-center" style="font-weight:600; font-size:1.05rem; color:#222; letter-spacing:0.5px;">
+            <a href="https://university.atlassian.com/student/award/keciUDYzLbL3TLcQ93zU9A3t" target="_blank">Jira Service Management Fundamentals</a>
+          </p>
+        </div>
+        <!-- Adicione mais badges conforme necessário -->
+      </div>
+    </section><!-- /Certifications Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section resume-section-bg">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Minha Trajetória Profissional</h2>
+        <p class="mb-4">Conheça minha formação acadêmica e as experiências profissionais que moldaram minha carreira em TI.</p>
+      </div>
+      <div class="container">
+        <div class="row gy-5">
+          <!-- Formação Acadêmica -->
+          <div class="col-lg-5" data-aos="fade-right" data-aos-delay="100">
+            <div class="timeline">
+              <h3 class="resume-title mb-4"><i class="bi bi-mortarboard-fill me-2 text-primary"></i>Formação Acadêmica</h3>
+              <div class="timeline-item mb-4">
+                <div class="timeline-dot bg-primary"></div>
+                <div class="timeline-content card shadow-sm p-3" style="border-left: 5px solid #1987ff;">
+                  <h4 class="mb-1">Banco de Dados</h4>
+                  <span class="badge bg-primary mb-1">2022 - 2024</span>
+                  <p class="mb-0"><em>Universidade Estácio de Sá, RJ</em></p>
+                </div>
+              </div>
+              <div class="timeline-item mb-4">
+                <div class="timeline-dot bg-primary"></div>
+                <div class="timeline-content card shadow-sm p-3" style="border-left: 5px solid #1987ff;">
+                  <h4 class="mb-1">Técnico em Informática</h4>
+                  <span class="badge bg-primary mb-1">2017 - 2018</span>
+                  <p class="mb-0"><em>FAETEC - Amaury Cesar Vieira, Volta Redonda, RJ</em></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Experiência Profissional -->
+          <div class="col-lg-7" data-aos="fade-left" data-aos-delay="200">
+            <div class="timeline">
+              <h3 class="resume-title mb-4"><i class="bi bi-briefcase-fill me-2 text-success"></i>Experiência Profissional</h3>
+              <!-- Experiência 1 -->
+              <div class="timeline-item mb-4">
+                <div class="timeline-dot bg-success"></div>
+                <div class="timeline-content card shadow-sm p-3" style="border-left: 5px solid #198754;">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h4 class="mb-0">Analista de Suporte N2 Jr.</h4>
+                    <span class="badge bg-success">2024 - Atualmente</span>
+                  </div>
+                  <h5 class="mb-1 text-muted">Stefanini Group | Volkswagen - Caminhões e Ônibus</h5>
+                  <p class="mb-1"><em>Porto Real, RJ</em></p>
+                  <ul class="mb-0">
+                    <li>Suporte N2 em microinformática (notebooks, desktops) e telefonia móvel (MDM em iOS).</li>
+                    <li>Instalação e configuração de sistemas operacionais e softwares padrão.</li>
+                    <li>Personalização de equipamentos conforme IDs e perfis de usuários.</li>
+                    <li>Gestão de chamados via ITSM, análise e escalonamento conforme criticidade.</li>
+                    <li>Gestão de ativos de TI, inventário e controle de equipamentos.</li>
+                    <li>Atendimento Field Service em ambiente multinacional (Volkswagen Group).</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Experiência 2 -->
+              <div class="timeline-item mb-4">
+                <div class="timeline-dot bg-success"></div>
+                <div class="timeline-content card shadow-sm p-3" style="border-left: 5px solid #198754;">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h4 class="mb-0">Analista de Suporte N2 Jr.</h4>
+                    <span class="badge bg-success">2023 - 2024</span>
+                  </div>
+                  <h5 class="mb-1 text-muted">ATOS Brasil | Stellantis Group</h5>
+                  <p class="mb-1"><em>Porto Real, RJ</em></p>
+                  <ul class="mb-0">
+                    <li>Levantamento e validação de dados de ativos informáticos na planta Stellantis.</li>
+                    <li>Especialista em Field Service: formatação, configuração e testes de Laptops e Desktops.</li>
+                    <li>Conhecimento em Active Directory, estoque, Excel Avançado, Office 365, segurança em TI e redes LAN/WAN.</li>
+                    <li>Participação ativa no Full Inventory 2023: inventário de 3 mil ativos em menos de 90 dias.</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Experiência 3 -->
+              <div class="timeline-item mb-4">
+                <div class="timeline-dot bg-success"></div>
+                <div class="timeline-content card shadow-sm p-3" style="border-left: 5px solid #198754;">
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h4 class="mb-0">Consultor Técnico de TI Jr.</h4>
+                    <span class="badge bg-success">2021 - 2022</span>
+                  </div>
+                  <h5 class="mb-1 text-muted">SD Sistemas</h5>
+                  <p class="mb-1"><em>Porto Real, RJ</em></p>
+                  <ul class="mb-0">
+                    <li>Manutenções preventivas e corretivas em software e hardware.</li>
+                    <li>Formatações e backups em servidores, retaguardas e PDVs (Cobian para banco de dados).</li>
+                    <li>Atendimento externo: viagens para suporte presencial na região.</li>
+                    <li>Gestão de chamados via Movidesk, contribuindo para eficiência dos processos.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section><!-- /Resume Section -->
 
     <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
+    <section id="contact" class="contact section" style="background: rgba(245,248,255,0.93); border-radius: 18px;">
       <div class="container section-title" data-aos="fade-up">
         <h2>Contato</h2>
-        <p>Caso queira entrar em contato comigo, preencha o Form abaixo, ou entre em contato comigo através das informações a seguir.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4">
-
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-telephone flex-shrink-0"></i>
+        <p>Fique à vontade para me enviar uma mensagem pelo formulário ou utilizar meus canais diretos de contato abaixo.</p>
+      </div>
+      <div class="container py-4" data-aos="fade" data-aos-delay="100">
+        <div class="row g-5 align-items-stretch">
+          <!-- Informações de contato -->
+          <div class="col-lg-4 d-flex flex-column justify-content-between">
+            <div class="info-item d-flex align-items-center mb-4 p-3 shadow-sm rounded" style="background: #fff;">
+              <i class="bi bi-telephone flex-shrink-0 fs-3 text-primary me-3"></i>
               <div>
-                <h3>Telefone</h3>
-                <p>(24) 99259-9575</p>
+                <h5 class="mb-1">Telefone / WhatsApp</h5>
+                <a href="https://wa.me/5524992599575" target="_blank" style="color:#222; text-decoration:none; display: flex; align-items: center;">
+                  <img src="whats-icon.png" alt="WhatsApp" class="icon-img me-2" style="width: 24px; height: 24px; object-fit: contain;"/>
+                  (24) 99259-9575
+                </a>
               </div>
-            </div><!-- End Info Item -->
-
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-envelope flex-shrink-0"></i>
+            </div>
+            <div class="info-item d-flex align-items-center mb-4 p-3 shadow-sm rounded" style="background: #fff;">
+              <i class="bi bi-envelope flex-shrink-0 fs-3 text-primary me-3"></i>
               <div>
-                <h3>Email</h3>
-                <p>gregbcontato@gmail.com</p>
+                <h5 class="mb-1">Email</h5>
+                <a href="mailto:gregbcontato@gmail.com" style="color:#222; text-decoration:none;">
+                  gregbcontato@gmail.com
+                </a>
               </div>
-            </div><!-- End Info Item -->
-
+            </div>
+            <div class="info-item d-flex align-items-center p-3 shadow-sm rounded" style="background: #fff;">
+              <i class="bi bi-geo-alt flex-shrink-0 fs-3 text-primary me-3"></i>
+              <div>
+                <h5 class="mb-1">Localização</h5>
+                <p class="mb-0">Resende, RJ</p>
+              </div>
+            </div>
           </div>
-
+          <!-- Formulário de contato -->
           <div class="col-lg-8">
-            <form action="https://formsubmit.co/gregbcontato@gmail.com" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <!-- Proteção contra spam -->
+            <form action="https://formsubmit.co/gregbcontato@gmail.com" method="POST" class="php-email-form p-4 shadow-sm rounded" style="background: #fff;">
               <input type="hidden" name="_captcha" value="false">
-              <!-- Redirecionamento após envio -->
               <input type="hidden" name="_next" value="https://code-greg.github.io/obrigado.html">
-              <div class="row gy-4">
-
+              <div class="row gy-3">
                 <div class="col-md-6">
                   <input type="text" name="name" class="form-control" placeholder="Seu nome" required>
                 </div>
-
-                <div class="col-md-6 ">
+                <div class="col-md-6">
                   <input type="email" class="form-control" name="email" placeholder="Seu Email" required>
                 </div>
-
                 <div class="col-md-12">
                   <input type="text" class="form-control" name="subject" placeholder="Assunto" required>
                 </div>
-
                 <div class="col-md-12">
                   <textarea class="form-control" name="message" rows="6" placeholder="Mensagem" required></textarea>
                 </div>
-
-                <div class="col-md-12 text-center">
-                  <button type="submit">Enviar Mensagem</button>
+                <div class="col-md-12 text-end">
+                  <button type="submit" class="btn btn-primary px-4 py-2">Enviar Mensagem</button>
                 </div>
-
               </div>
             </form>
-          </div><!-- End Contact Form -->
-
+          </div>
         </div>
-
       </div>
-
     </section><!-- /Contact Section -->
 
   </main>
 
-  <footer id="footer" class="footer position-relative light-background">
-    <div class="container">
-      <h3 class="sitename">Gregory Braga</h3>
-      <p>"Fortuna audaces sequitur."</p>
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://www.instagram.com/yng.greek?igsh=MW9kNWRqdHo0eHVsdg=="><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/gregorybraga"><i class="bi bi-linkedin"></i></a>
+  <!-- Footer -->
+
+  <footer id="footer" class="footer position-relative">
+    <div class="container py-4 text-center">
+      <h3 class="sitename" style="color: #fff; letter-spacing: 1px; font-family: 'Dancing Script', cursive; font-size: 3.4rem;">
+        Gregory Braga
+      </h3>
+      <p style="font-style: italic; color: #e3e9f7;">"Fortuna audaces sequitur."</p>
+      <div class="social-links d-flex justify-content-center mb-3">
+        <a href="https://www.instagram.com/yng.greek?igsh=MW9kNWRqdHo0eHVsdg==" target="_blank" rel="noopener" style="color:#fff; opacity:0.85; font-size:1.0rem; margin:0 10px;"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/gregorybraga" target="_blank" rel="noopener" style="color:#fff; opacity:0.85; font-size:1.5rem; margin:0 10px;"><i class="bi bi-linkedin"></i></a>
       </div>
-      <div class="container">
-        <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Gregory Braga</strong> <span>All Rights Reserved</span>
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        </div>
+      <div class="copyright" style="color: #e3e9f7;">
+        <span>Copyright</span> <strong class="px-1 sitename" style="color: #fff;">Gregory Braga</strong> <span>All Rights Reserved</span>
+      </div>
+      <div class="credits" style="color: #e3e9f7; font-size: 0.50rem;">
+        <!-- Créditos -->
       </div>
     </div>
   </footer>
@@ -357,7 +478,6 @@
   <!-- Vendor JS Files -->
   <script src="bootstrap.bundle.min.js"></script>
   <!-- <script src="validate.js"></script> -->
-  <script src="waypoints.min.js"></script>
   <script src="aos.js"></script>
   <script src="typed.umd.js"></script>
   <script src="purecounter_vanilla.js"></script>

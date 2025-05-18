@@ -66,6 +66,11 @@ body {
   font-family: var(--default-font);
 }
 
+body, .section p, .card-text, .sobre-mim-paragrafo, .resume-section-bg, .info-item, .php-email-form, .timeline-content, .container section-title p {
+  font-family: 'Share Tech Mono', 'Roboto Mono', 'Fira Mono', 'Courier New', monospace !important;
+  letter-spacing: 0.02em;
+}
+
 a {
   color: var(--accent-color);
   text-decoration: none;
@@ -223,6 +228,7 @@ h6 {
   font-family: var(--nav-font);
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 10px 18px;
   margin-bottom: 8px;
   font-size: 15px;
@@ -276,66 +282,89 @@ h6 {
   display: block;
 }
 
-/*--------------------------------------------------------------
-# Global Footer
---------------------------------------------------------------*/
-.footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  font-size: 14px;
-  text-align: center;
-  padding: 30px 0;
-  position: relative;
-}
-
-.footer h3 {
-  font-size: 36px;
-  font-weight: 700;
-  position: relative;
-  padding: 0;
-  margin: 0 0 15px 0;
-}
-
-.footer p {
-  font-size: 15;
-  font-style: italic;
-  padding: 0;
-  margin: 0 0 30px 0;
-}
-
-.footer .social-links {
-  margin: 0 0 30px 0;
-}
-
-.footer .social-links a {
-  font-size: 16px;
+/* Ícones do menu lateral - tamanho ainda menor e forma quadrada com cantos arredondados */
+.navicon {
+  font-size: 0.95rem;
+  color: #2e5c8d;
+  background: #f4f8ff;
+  border-radius: 8px;      /* Forma quadrada com cantos arredondados */
+  padding: 4px;
+  margin-right: 0;
+  box-shadow: 0 1px 4px 0 rgba(25,135,255,0.08);
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.12s;
+  vertical-align: middle;
+  border: 1px solid #e3e9f7;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  line-height: 1;
-  margin: 0 4px;
-  border-radius: 50%;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
+  width: 20px;
+  height: 20px;
 }
 
-.footer .social-links a:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
-  text-decoration: none;
+a.active .navicon,
+a:hover .navicon {
+  background: #383b3f;
+  color: #fff;
+  box-shadow: 0 2px 8px 0 rgba(25,135,255,0.18);
+  transform: scale(1.25);
 }
 
-.footer .copyright {
-  padding-top: 25px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+/*--------------------------------------------------------------
+# Global Footer
+--------------------------------------------------------------*/
+/* Footer com imagem panorâmica e fade */
+.footer {
+  position: relative;
+  color: #fff;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  overflow: hidden;
+  background: #111;
 }
 
-.footer .credits {
-  font-size: 13px;
-  padding-top: 5px;
+.footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('footer-bg.jpg') center center/cover no-repeat;
+  opacity: 0.95; /* ajuste a intensidade da imagem */
+  z-index: 1;
+}
+
+.footer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, #111 60%, rgba(25,135,255,0.3) 100%);
+  opacity: 0.85; /* controla o fade sobre a imagem */
+  z-index: 2;
+}
+
+.footer > .container,
+.footer * {
+  position: relative;
+  z-index: 3;
+}
+
+/* Ícones sociais do footer - apenas ícone, centralizado, hover preto */
+.footer .social-links a i {
+  font-size: 2rem;
+  color: #fff;
+  background: none;
+  border-radius: 0;
+  margin: 0 8px;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  transition: color 0.22s, transform 0.18s;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.footer .social-links a:hover i {
+  color: #111;
+  background: none;
+  transform: scale(1.12);
 }
 
 /*--------------------------------------------------------------
@@ -621,6 +650,19 @@ section,
   line-height: 0;
 }
 
+.sobre-mim-paragrafo {
+  background: rgba(27, 73, 126, 0.07); /* leve azul translúcido */
+  border-left: 5px solid #0354a5;
+  border-radius: 12px;
+  padding: 18px 24px;
+  font-size: 1.08rem;
+  color: #222;
+  font-style: italic;
+  box-shadow: 0 2px 12px 0 rgba(25,135,255,0.06);
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
 /*--------------------------------------------------------------
 # Stats Section
 --------------------------------------------------------------*/
@@ -697,6 +739,25 @@ section,
   background-color: var(--accent-color);
 }
 
+/* Ícones das skills */
+.skill-icon {
+  font-size: 2.6rem;
+  color: #1987ff;
+  background: #f4f8ff;
+  border-radius: 50%;
+  padding: 18px;
+  box-shadow: 0 2px 12px 0 rgba(25,135,255,0.08);
+  margin-bottom: 14px;
+  border: 1.5px solid #e3e9f7;
+  transition: color 0.2s, background 0.25s, box-shadow 0.25s, transform 0.18s;
+}
+.skill-card:hover .skill-icon {
+  color: #fff;
+  background: #1987ff;
+  box-shadow: 0 6px 24px 0 rgba(25,135,255,0.18);
+  transform: scale(1.10);
+}
+
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
@@ -754,6 +815,117 @@ section,
   top: 0;
   background: var(--background-color);
   border: 2px solid var(--accent-color);
+}
+
+/* Estilização da seção de trajetória profissional (currículo) */
+
+.resume-section-bg {
+  background: rgba(245,248,255,0.93);
+  border-radius: 18px;
+  padding: 32px 0;
+}
+
+.timeline {
+  position: relative;
+  margin-left: 10px;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 32px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 0;
+  top: 18px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px #1987ff33;
+  z-index: 1;
+}
+
+.bg-primary { background: #1987ff !important; }
+.bg-success { background: #198754 !important; }
+
+.timeline-content {
+  margin-left: 16px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px 0 rgba(25,135,255,0.07);
+  padding: 18px 24px;
+  border-left: 5px solid #1987ff;
+  transition: box-shadow 0.2s;
+}
+
+.timeline-content.card {
+  border-left: 5px solid #198754;
+  transition: 
+    box-shadow 0.3s cubic-bezier(.4,2,.6,1), 
+    transform 0.3s cubic-bezier(.4,2,.6,1), 
+    z-index 0.3s;
+  z-index: 1;
+  position: relative;
+}
+
+.timeline-content.card:hover {
+  transform: scale(1.04) translateY(-6px);
+  box-shadow: 0 12px 36px 0 rgba(25,135,255,0.18), 0 2px 16px 0 rgba(25,135,255,0.10);
+  background: #fff;
+  z-index: 10;
+  border-left: 7px solid #0d6efd;
+  cursor: pointer;
+}
+
+.timeline-content.card:not(:hover) {
+  opacity: 0.92;
+  filter: blur(0.5px);
+  transition: opacity 0.3s, filter 0.3s;
+}
+
+.timeline-content.card:hover {
+  opacity: 1;
+  filter: none;
+}
+
+.timeline-content h4 {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #1987ff;
+}
+
+.timeline-content h5 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.timeline-content ul {
+  padding-left: 18px;
+  margin-bottom: 0;
+}
+
+.timeline-content ul li {
+  font-size: 1.01rem;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.timeline-content .badge {
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 12px;
+}
+
+@media (max-width: 991px) {
+  .timeline { margin-left: 0; }
+  .timeline-item { padding-left: 0; }
+  .timeline-dot { display: none; }
+  .timeline-content { margin-left: 0; }
 }
 
 /*--------------------------------------------------------------
@@ -1075,17 +1247,7 @@ section,
 }
 
 .contact .info-item i {
-  color: var(--accent-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 92%);
-  font-size: 20px;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-  transition: all 0.3s ease-in-out;
-  margin-right: 15px;
+  display: none !important;
 }
 
 .contact .info-item h3 {
@@ -1099,11 +1261,6 @@ section,
   padding: 0;
   margin-bottom: 0;
   font-size: 14px;
-}
-
-.contact .info-item:hover i {
-  background: var(--accent-color);
-  color: var(--contrast-color);
 }
 
 .contact .php-email-form {
@@ -1456,4 +1613,16 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+/*--------------------------------------------------------------
+# Icon Image
+--------------------------------------------------------------*/
+.icon-img {
+  width: 42px;
+  height: 22px;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
 }
