@@ -217,37 +217,61 @@ h6 {
 
 .navmenu ul {
   list-style: none;
-  padding: 0 0 20px 0;
+  padding: 0 0 100px 0;
   margin: 0;
-  width: 140px;
+  width: 80px;
 }
 
+/* Menu lateral - estilo inicial restaurado */
 .navmenu a,
 .navmenu a:focus {
   color: var(--nav-color);
   font-family: var(--nav-font);
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 18px;
+  align-items: left;
+  justify-content: flex-start;
+  padding: 12px 16px;
   margin-bottom: 8px;
   font-size: 15px;
-  border-radius: 50px;
+  border-radius: 100px;
   background: color-mix(in srgb, var(--default-color), transparent 92%);
   height: 56px;
   width: 100%;
   overflow: hidden;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 .navmenu a i,
-.navmenu a:focus i {
-  font-size: 20px;
+.navmenu a:focus i,
+.navicon {
+  font-size: 1.25rem !important;
+  color: #1987ff;
+  background: none;
+  border-radius: 8px;
+  padding: 0;
+  margin-right: 12px;
+  box-shadow: none;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.18s, transform 0.12s;
+  vertical-align: middle;
+}
+
+.navmenu a.active i,
+.navmenu a:hover i {
+  color: #0d6efd;
+  background: none;
+  transform: scale(1.13);
 }
 
 .navmenu a span,
 .navmenu a:focus span {
-  padding: 0 5px 0 7px;
+  display: inline !important;
+  padding-left: 0;
+  font-size: 15px;
+  font-family: var(--nav-font);
 }
 
 @media (min-width: 992px) {
@@ -280,33 +304,6 @@ h6 {
 .navmenu a:hover span,
 .navmenu li:hover>a span {
   display: block;
-}
-
-/* Ícones do menu lateral - tamanho ainda menor e forma quadrada com cantos arredondados */
-.navicon {
-  font-size: 0.95rem;
-  color: #2e5c8d;
-  background: #f4f8ff;
-  border-radius: 8px;      /* Forma quadrada com cantos arredondados */
-  padding: 4px;
-  margin-right: 0;
-  box-shadow: 0 1px 4px 0 rgba(25,135,255,0.08);
-  transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.12s;
-  vertical-align: middle;
-  border: 1px solid #e3e9f7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 20px;
-}
-
-a.active .navicon,
-a:hover .navicon {
-  background: #383b3f;
-  color: #fff;
-  box-shadow: 0 2px 8px 0 rgba(25,135,255,0.18);
-  transform: scale(1.25);
 }
 
 /*--------------------------------------------------------------
@@ -741,21 +738,22 @@ section,
 
 /* Ícones das skills */
 .skill-icon {
-  font-size: 2.6rem;
+  font-size: 2.1rem !important;
   color: #1987ff;
   background: #f4f8ff;
   border-radius: 50%;
-  padding: 18px;
-  box-shadow: 0 2px 12px 0 rgba(25,135,255,0.08);
-  margin-bottom: 14px;
+  padding: 12px;
+  box-shadow: 0 2px 8px 0 rgba(25,135,255,0.08);
+  margin-bottom: 10px;
   border: 1.5px solid #e3e9f7;
-  transition: color 0.2s, background 0.25s, box-shadow 0.25s, transform 0.18s;
+  transition: none;
 }
+
 .skill-card:hover .skill-icon {
-  color: #fff;
-  background: #1987ff;
-  box-shadow: 0 6px 24px 0 rgba(25,135,255,0.18);
-  transform: scale(1.10);
+  color: #1987ff;
+  background: #f4f8ff;
+  box-shadow: 0 2px 8px 0 rgba(25,135,255,0.08);
+  transform: none;
 }
 
 /*--------------------------------------------------------------
@@ -919,6 +917,19 @@ section,
   font-weight: 500;
   padding: 4px 12px;
   border-radius: 12px;
+}
+
+/* Badge: expande e ganha sombreamento ao passar o mouse */
+.badge {
+  transition: 
+    transform 0.18s,
+    box-shadow 0.22s;
+  cursor: pointer;
+}
+
+.badge:hover {
+  transform: scale(1.13);
+  box-shadow: 0 4px 18px 0 rgba(25,135,255,0.22);
 }
 
 @media (max-width: 991px) {
@@ -1625,4 +1636,20 @@ section,
   display: inline-block;
   vertical-align: middle;
   margin-right: 6px;
+}
+
+/* Imagens dos badges de certificação: sem fundo, sem borda, apenas sombra no hover */
+#certificacoes img {
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transition: transform 0.18s, box-shadow 0.22s;
+  cursor: pointer;
+}
+
+#certificacoes img:hover {
+  transform: scale(1.55);
+  box-shadow: 0 8px 32px 0 rgba(25,135,255,0.18), 0 2px 8px 0 rgba(0,0,0,0.10);
+  z-index: 2;
 }
