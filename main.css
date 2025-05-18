@@ -210,35 +210,36 @@ h6 {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
+/* Menu lateral: estilização moderna, mantendo alinhamento e visual limpo */
 .navmenu {
   padding: 0;
   z-index: 9997;
 }
 
+/* Menu lateral: mostra só o texto do item em hover, os outros só ícone */
 .navmenu ul {
-  list-style: none;
-  padding: 0 0 100px 0;
-  margin: 0;
-  width: 80px;
+  width: 64px; /* largura só para ícones */
+  transition: width 0.25s;
+  overflow: visible;
 }
 
-/* Menu lateral - estilo inicial restaurado */
 .navmenu a,
 .navmenu a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: none;
+  border-radius: 32px;
+  width: 100%;
+  padding: 10px 18px;
+  margin-bottom: 8px;
   color: var(--nav-color);
   font-family: var(--nav-font);
-  display: flex;
-  align-items: left;
-  justify-content: flex-start;
-  padding: 12px 16px;
-  margin-bottom: 8px;
   font-size: 15px;
-  border-radius: 100px;
-  background: color-mix(in srgb, var(--default-color), transparent 92%);
-  height: 56px;
-  width: 100%;
-  overflow: hidden;
-  transition: 0.2s;
+  font-weight: 500;
+  transition: background 0.18s, color 0.18s;
+  text-decoration: none;
+  position: relative;
 }
 
 .navmenu a i,
@@ -246,64 +247,61 @@ h6 {
 .navicon {
   font-size: 1.25rem !important;
   color: #1987ff;
+  margin-right: 14px;
   background: none;
   border-radius: 8px;
   padding: 0;
-  margin-right: 12px;
   box-shadow: none;
   border: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   transition: color 0.18s, transform 0.12s;
-  vertical-align: middle;
+}
+
+.navmenu a.active,
+.navmenu a:hover,
+.navmenu li:hover>a {
+  background: #050505;
+  color: #fff;
 }
 
 .navmenu a.active i,
 .navmenu a:hover i {
-  color: #0d6efd;
-  background: none;
+  color: #fff;
   transform: scale(1.13);
 }
 
-.navmenu a span,
-.navmenu a:focus span {
-  display: inline !important;
-  padding-left: 0;
-  font-size: 15px;
-  font-family: var(--nav-font);
+.navmenu a span {
+  opacity: 0;
+  width: 0;
+  margin-left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: opacity 0.18s, width 0.18s, margin-left 0.18s;
+  pointer-events: none;
 }
 
-@media (min-width: 992px) {
-
-  .navmenu a,
-  .navmenu a:focus {
-    max-width: 56px;
-  }
-
-  .navmenu a span,
-  .navmenu a:focus span {
-    display: none;
-  }
-}
-
-.navmenu a:hover,
-.navmenu .active,
-.navmenu .active:focus,
-.navmenu li:hover>a {
-  color: var(--contrast-color);
-  background: var(--nav-hover-color);
-}
-
-.navmenu a:hover,
-.navmenu li:hover>a {
-  max-width: 100%;
-  color: var(--contrast-color);
-}
-
+/* Exibe o texto apenas do link em hover ou ativo */
 .navmenu a:hover span,
-.navmenu li:hover>a span {
-  display: block;
+.navmenu a:focus span,
+.navmenu a.active span {
+  opacity: 1;
+  width: auto;
+  margin-left: 8px;
+  pointer-events: auto;
+}
+
+.navmenu:hover ul,
+.navmenu:focus-within ul {
+  width: 200px; /* largura para ícone + texto */
+}
+
+
+/* Remove bullets do ul */
+.navmenu ul {
+  list-style: none;
+  padding-left: 0;
 }
 
 /*--------------------------------------------------------------
