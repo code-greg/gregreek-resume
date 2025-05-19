@@ -1732,12 +1732,3 @@ section,
   vertical-align: middle;
   margin-right: 6px;
 }
-
-/* Imagens dos badges de certificação: sem fundo, sem borda, apenas sombra no hover */
-#certificacoes img {
-  background: none !important;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.07); /* mantém a sombra */
-  border: none !important;
-  border-radius: 12px;
-  padding: 0;
-}
