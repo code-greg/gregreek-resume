@@ -593,14 +593,35 @@ section,
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-  width: 100%;
-  min-height: 100vh;
   position: relative;
-  padding: 80px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
+  min-height: 420px;
+  background: #fff;
+}
+
+.hero-bg-effect {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-bg-effect img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: 
+    opacity 0.5s cubic-bezier(.4,0,.2,1),
+    filter 0.5s cubic-bezier(.4,0,.2,1);
+  will-change: opacity, filter;
+}
+
+/* Conteúdo hero acima da imagem */
+.hero .container {
+  position: relative;
+  z-index: 2;
 }
 
 .hero img {
@@ -621,11 +642,6 @@ section,
   position: absolute;
   inset: 0;
   z-index: 2;
-}
-
-.hero .container {
-  position: relative;
-  z-index: 3;
 }
 
 .hero h2 {
@@ -733,7 +749,7 @@ section,
 #about {
   background: #fff;
   border-radius: 0 0 18px 18px;
-  margin-top: -30px;
+  margin-top: 0;
   position: relative;
   z-index: 3;
   box-shadow: 0 -8px 32px 0 rgba(25,135,255,0.04);

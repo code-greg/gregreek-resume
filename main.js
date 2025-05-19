@@ -226,4 +226,26 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  /**
+   * Hero background effect on scroll
+   */
+  document.addEventListener('scroll', function () {
+    const hero = document.querySelector('.hero');
+    const bg = document.querySelector('.hero-bg-effect img');
+    if (!hero || !bg) return;
+
+    // Calcula quanto da hero já foi rolada
+    const heroRect = hero.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    const scrollY = Math.max(0, -heroRect.top);
+
+    // Limite do efeito (até 300px de rolagem)
+    const maxScroll = Math.min(scrollY, 300);
+    const opacity = 1 - maxScroll / 300;
+    const blur = maxScroll / 60; // até 5px de blur
+
+    bg.style.opacity = opacity;
+    bg.style.filter = `blur(${blur}px)`;
+  });
+
 })();
