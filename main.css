@@ -1736,15 +1736,8 @@ section,
 /* Imagens dos badges de certificação: sem fundo, sem borda, apenas sombra no hover */
 #certificacoes img {
   background: none !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07); /* mantém a sombra */
   border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  transition: transform 0.18s, box-shadow 0.22s;
-  cursor: pointer;
-}
-
-#certificacoes img:hover {
-  transform: scale(1.55);
-  box-shadow: 0 8px 32px 0 rgba(25,135,255,0.18), 0 2px 8px 0 rgba(0,0,0,0.10);
-  z-index: 2;
+  border-radius: 12px;
+  padding: 0;
 }
