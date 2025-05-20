@@ -1732,3 +1732,26 @@ section,
   vertical-align: middle;
   margin-right: 6px;
 }
+
+/*--------------------------------------------------------------
+# Certification Badges
+--------------------------------------------------------------*/
+/* Badges de certificação: sem fundo, sem borda, efeito de escala no hover */
+#certificacoes img,
+#certificacoes .badge-img {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  transition: transform 0.18s;
+  cursor: pointer;
+  display: block;
+  max-width: 150px;
+  height: auto;
+}
+
+#certificacoes img:hover,
+#certificacoes .badge-img:hover {
+  transform: scale(1.13);
+}
